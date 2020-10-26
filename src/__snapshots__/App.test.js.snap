@@ -23,6 +23,13 @@ exports[`renders props correctly 1`] = `
     <p>
       Your interest month by month:
     </p>
+    <p>
+      Your total interest: 
+      <strong>
+         
+      </strong>
+       kr
+    </p>
   </div>
 </div>
 `;

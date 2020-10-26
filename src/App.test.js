@@ -7,12 +7,12 @@ import renderer from 'react-test-renderer';
 import { fireEvent, render } from '@testing-library/react';
 import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
+it('renders App component without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<App></App>, div);
 });
 
-it('renders without crashing', () => {
+it('renders LoanInput component without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<LoanInput></LoanInput>, div);
 });
@@ -23,18 +23,10 @@ it('renders props correctly', () => {
   expect(tree).toMatchSnapshot();
 });
 
-it('Should show h3', ()=>{
+it('LoanOutput should show five paragraphs', ()=>{
   const component = shallow(<LoanOutput/>);
-  expect(component.find("p")).toHaveLength(4);  
+  expect(component.find("p")).toHaveLength(5);  
 })
-
-//  it('<input> updates input value on onChange event', () => {
-//     const component = shallow(<LoanInput />);
-//     const input = component.find('#years');
-//     input.props().onChange({ target: { value: 3}});
-//     wrapper.find("#years").simulate("change", mockEvent);
-//     expect(component.state('input')).toEqual(3);
-//   });
 
 it('payback time input field renders the correct number', () => {
   const component = render(<LoanInput />);
