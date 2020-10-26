@@ -28,7 +28,7 @@ export default function LoanInput({
 
                     <div className="Dashboard__input">
                         <p>Loan amount:  </p>
-                        <input type="number" min="0" max="10000000" placeholder="Loan amount" onChange={saveLoanAmount}/>
+                        <input type="number" min="10000" max="10000000" placeholder="Loan amount" onChange={saveLoanAmount}/>
                         <p> kr</p>
                     </div>
 

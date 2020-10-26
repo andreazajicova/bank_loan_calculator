@@ -5,7 +5,8 @@ export default function LoanOutput({
     years,
     currentInterest,
     monthlyPayment,
-    monthlyInterests
+    monthlyInterests,
+    totalInterest
 
 }) {
 
@@ -27,6 +28,7 @@ export default function LoanOutput({
                         </div>
                     )
                 })}
+                <p>Your total interest: <strong>{totalInterest} </strong> kr</p>
             </div>
         </div>
     )

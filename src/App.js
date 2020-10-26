@@ -16,6 +16,7 @@ const App = () => {
   const [years, setYears] = useState(0);
   const [monthlyInterests, setMonthlyInterests] = useState([]);
   const [monthlyPayment, setMonthlyPayment] = useState(0);
+  const [totalInterest, setTotalInterest] = useState(0);
     
   const saveLoanAmount = (event) => {
     const loan = +(event.target.value);
@@ -44,20 +45,21 @@ const App = () => {
     const firstMonhtlyInterest = Math.round((((loanAmount / 100) * currentInterest) / 12) * 100) / 100;
     array.push(firstMonhtlyInterest);
     setMonthlyPayment(monthlyPayment);
+    
 
     if(balance && balance > monthlyPayment) {
       for(let i = 0; i < months; i++) {
         const yearlyInterest = Math.round((((balance / 100) * currentInterest)) * 100) / 100;
         const monthlyInterest = Math.round((yearlyInterest / 12) * 100) / 100;
         balance -= monthlyPayment;
-        console.log(monthlyInterest);
         array.push(monthlyInterest);
         setMonthlyInterests(array);
-        
+        const total = array.reduce((a, b) => a + b, 0);
+        const totalInterest = Math.round(total * 100) / 100;
+        setTotalInterest(totalInterest);
       }
     }     
   }
-  
   
   const setInterest = () => {
     const type = document.getElementById("select_id").value;
@@ -91,6 +93,7 @@ const App = () => {
           monthlyInterests={monthlyInterests}
           monthlyPayment={monthlyPayment}
           currentInterest={currentInterest}
+          totalInterest={totalInterest}
         />
         ) : (
           ''
