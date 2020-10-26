@@ -1,10 +1,15 @@
+/* body {
+  background-color: #282c34;
+} */
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  border: solid 1px black;
+  width: 350px;
+  margin: auto;
+  padding: auto;
+  margin-top: 20px;
+  background-color: #dce3e3;
 }
 
 @media (prefers-reduced-motion: no-preference) {

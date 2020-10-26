@@ -1,0 +1,44 @@
+/* .Dashboard__wrapper {
+    border: 10px solid white;
+} */
+
+.Dashboard__wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    /* border: solid 1px black;
+    width: 300px;
+    margin: auto;
+    padding: 15px; */
+}
+
+.Dashboard__select {
+    display: flex;
+    flex-direction: row;
+}
+
+.Dashboard__value {
+    margin-top: 15px;
+    margin-left: 5px;
+    height: 20px;
+    width: 85px;
+}
+
+.Dashboard__input, .Dashboard__interest, .Dashboard__payback {
+    display: flex;
+    flex-direction: row;
+}
+
+input {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 15px;
+    height: 15px;
+    width: 130px;
+}
+
+.Dashboard__button {
+    margin-top: 5px;
+    font-size: 18px;
+    margin-bottom: 70px;
+}

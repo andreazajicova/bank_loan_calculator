@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders props correctly 1`] = `
+<div
+  className="Loan__wrapper"
+>
+  <p>
+    Your payback time is: 
+     year(s).
+  </p>
+  <p>
+    With 
+    3.5
+     % yearly interest the payback of your loan looks like following: 
+  </p>
+  <div>
+    <p>
+      Your fixed payment every month: 
+      <strong />
+    </p>
+  </div>
+  <div>
+    <p>
+      Your interest month by month:
+    </p>
+  </div>
+</div>
+`;
